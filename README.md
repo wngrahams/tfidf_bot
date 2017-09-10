@@ -10,3 +10,6 @@ Before:
 ![Before](https://github.com/wngrahams/trumpify_bot/blob/master/res/before.png)
 After:
 ![After](https://github.com/wngrahams/trumpify_bot/blob/master/res/after.png)
+
+
+[Inspired by /u/vantablackfriday](https://www.reddit.com/r/pics/comments/6u6mw4/sitting_on_the_couch_with_a_headache_and_an_ice/dlqtbxz/)
