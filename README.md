@@ -5,4 +5,4 @@ This bot replies to trump-like comments on reddit and fills them with
 appropriate emojis to make them more accurate.
 
 Example:
-Before and After
+[Before](https://github.com/wngrahams/trumpify_bot/blob/master/res/before.png) and [After](https://github.com/wngrahams/trumpify_bot/blob/master/res/after.png)
