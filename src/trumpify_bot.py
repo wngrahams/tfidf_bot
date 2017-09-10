@@ -21,7 +21,7 @@ def run_bot(reddit):
     print("obtaining 25 comments")
     for comment in reddit.subreddit('test').comments(limit=25):
         if "send their best" in comment.body:
-            print("String with \"send their best\" found in comment " + comment.id)
+            print("String with \"send their best\" found in comment {}".format(comment.id))
             comment.reply("SAD! [Here's a pup to cheer you up!](http://imgur.com/r/aww/b7ILK3p)")
             print("Replied to comment " + comment.id)
 
