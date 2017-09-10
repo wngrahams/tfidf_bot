@@ -36,11 +36,11 @@ def get_spaces_list(str_length):
         temp_num = rand.randrange(0, 17)
         if temp_num < 2:
             num_spaces = 1
-        elif temp_num < 8:
+        elif temp_num < 6:
             num_spaces = 2
-        elif temp_num < 9:
+        elif temp_num < 8:
             num_spaces = 3
-        elif temp_num < 15:
+        elif temp_num < 14:
             num_spaces = 4
         elif temp_num < 16:
             num_spaces = 6

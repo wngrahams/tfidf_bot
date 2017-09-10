@@ -2,13 +2,14 @@ import os
 import praw
 import requests
 import time
-import src.trumpify as trumpify  # when running in pycharm
-# import trumpify  # when running in terminal
+# import src.trumpify as trumpify  # when running in pycharm
+import trumpify  # when running in terminal
 
 __author__ = 'grahamstubbs'
 
 
 STR_SEARCH = "When Mexico sends its people"
+STR_SEARCH_1 = "believe me, I have many"
 # COMMENT_REPLY = ("SAD! [Here's a pup to cheer you up!](http://imgur.com/r/aww/b7ILK3p)"
                  # "Pups send THEIR best. " + FINGERS_SPLAYED + " " + OK_HAND + " " + OPEN_HANDS + " " + WAVING_HAND)
 COMMENT_JOKE = "You requested a joke! Here it is:\n\n"
@@ -49,14 +50,14 @@ def main():
 def run_bot(reddit, replies_dict):
     print("obtaining 25 comments")
     for comment in reddit.subreddit('test').comments(limit=25):
-        if (STR_SEARCH.casefold() in comment.body.casefold()) \
+        if ((STR_SEARCH.casefold() in comment.body.casefold()) or STR_SEARCH_1.casefold() in comment.body.casefold()) \
                 and (comment.id not in replies_dict) \
                 and (comment.author != reddit.user.me()):  # don't reply to self or comments already replied to
             print("String with " + STR_SEARCH + " found in comment {}".format(comment.id))
 
             reply = trumpify.trumpify(comment.body)
 
-            comment.reply(reply)
+            comment.reply("> " + reply)
             print("Replied to comment " + comment.id)
 
             replies_dict[comment.id] = comment.id
