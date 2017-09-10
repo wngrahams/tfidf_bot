@@ -6,6 +6,9 @@ __author__ = 'grahamstubbs'
 
 STR_SEARCH = "send their best"
 
+INDEX_POINTING_UP = u'\u261D'
+OPEN_HANDS = u'\U0001F450'
+
 
 def authenticate():
     print("Authenticating...")
@@ -33,7 +36,6 @@ def main():
     for i in range(0, len(saved_comments)):
         comments_replied_to[saved_comments[i]] = saved_comments[i]
 
-    print(saved_comments)
     reddit = authenticate()
     while True:
         run_bot(reddit, comments_replied_to)
@@ -46,7 +48,7 @@ def run_bot(reddit, replies_dict):
                 and (comment.id not in replies_dict) \
                 and (comment.author != reddit.user.me()):  # dont reply to self or comments already replied to
             print("String with \"send their best\" found in comment {}".format(comment.id))
-            comment.reply("SAD! [Here's a pup to cheer you up!](http://imgur.com/r/aww/b7ILK3p) Pups send THEIR best.")
+            # comment.reply("SAD! [Here's a pup to cheer you up!](http://imgur.com/r/aww/b7ILK3p) Pups send THEIR best.")
             print("Replied to comment " + comment.id)
 
             replies_dict[comment.id] = comment.id
