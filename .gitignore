@@ -1,4 +1,4 @@
 #.gitignore
 
 #private info:
-config.py
+src/config.py
