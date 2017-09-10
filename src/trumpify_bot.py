@@ -6,8 +6,13 @@ __author__ = 'grahamstubbs'
 
 STR_SEARCH = "send their best"
 
+FINGERS_SPLAYED = u'\U0001F590'
 INDEX_POINTING_UP = u'\u261D'
+OK_HAND = u'\U0001F44C'
 OPEN_HANDS = u'\U0001F450'
+RAISED_FIST = u'\u270A'
+RAISED_HAND = u'\u270B'
+WAVING_HAND = u'\U0001F44B'
 
 
 def authenticate():
