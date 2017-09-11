@@ -2,8 +2,9 @@ import os
 import praw
 import requests
 import time
-# import src.trumpify as trumpify  # when running in pycharm
-import trumpify  # when running in terminal
+import src.ngram_analysis as ng
+import src.trumpify as trumpify  # when running in pycharm
+# import trumpify  # when running in terminal
 
 __author__ = 'grahamstubbs'
 
@@ -36,6 +37,8 @@ def get_saved_comments():
 
 
 def main():
+    ng.read_quotes("../res/trump_quotes.txt")
+
     # use a dict for O(1) lookup
     comments_replied_to = {}
     saved_comments = get_saved_comments()
@@ -57,10 +60,10 @@ def run_bot(reddit, replies_dict):
 
             reply = trumpify.trumpify(comment.body)
 
-            comment.reply("> " + reply)
+            # comment.reply("> " + reply)
             print("Replied to comment " + comment.id)
 
-            replies_dict[comment.id] = comment.id
+            # replies_dict[comment.id] = comment.id
 
             with open("../res/comments_replied_to.txt", "a") as file:
                 file.write(comment.id + "\n")
