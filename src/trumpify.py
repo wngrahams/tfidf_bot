@@ -50,13 +50,13 @@ def get_spaces_list(str_length):
         spaces_list.append(num_spaces)
         distance += num_spaces
 
-    print("spaces_list:")
-    print(spaces_list)
+    # print("spaces_list:")
+    # print(spaces_list)
     return spaces_list
 
 
 def trumpify(comment):
-    print("comment length: " + str(len(comment)))
+    # print("comment length: " + str(len(comment)))
     comment_list = comment.split()
     spaces_list = get_spaces_list(len(comment_list))
     output = comment_list[0] + " "
