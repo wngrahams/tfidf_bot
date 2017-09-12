@@ -14,6 +14,7 @@ __author__ = 'grahamstubbs'
 # TODO: clean input from txt file
 # TODO: clean output (don't reply to comments with a ton of formatting)
 # TODO: n-gram analysis
+# TODO: if a comment is replied to, add it to the txt file
 
 STOP_WORDS = set(stopwords.words('english'))
 
