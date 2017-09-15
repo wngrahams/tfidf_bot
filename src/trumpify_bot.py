@@ -3,11 +3,14 @@ import os
 import praw
 import requests
 import time
+
 import src.ngram_analysis as ng
 import src.trumpify as trumpify  # when running in pycharm
-from nltk.tokenize import sent_tokenize, word_tokenize
-from nltk.corpus import stopwords
 # import trumpify  # when running in terminal
+
+
+# from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.corpus import stopwords
 
 __author__ = 'grahamstubbs'
 
@@ -15,6 +18,8 @@ __author__ = 'grahamstubbs'
 # TODO: clean output (don't reply to comments with a ton of formatting)
 # TODO: n-gram analysis
 # TODO: if a comment is replied to, add it to the txt file
+# TODO: might need to include quotes from other authors for more accurate tf-idf scores
+# TODO: emoji placement based on tf-idf scores?
 
 STOP_WORDS = set(stopwords.words('english'))
 
