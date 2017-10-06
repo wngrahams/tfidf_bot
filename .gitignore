@@ -2,8 +2,6 @@
 
 #private info:
 src/config.py
-
-#praw.ini file:
 src/praw.ini
 
 #other stuff:
