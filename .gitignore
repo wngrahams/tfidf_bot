@@ -6,3 +6,4 @@ src/praw.ini
 
 #other stuff:
 .idea
+src/__pycache__/
